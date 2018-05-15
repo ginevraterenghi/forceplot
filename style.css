@@ -1,5 +1,5 @@
 body {
-  background: #EFE9E7;
+  background: #282828;
   font-family: -apple-system,
   BlinkMacSystemFont,
   "Segoe UI",
@@ -9,10 +9,11 @@ body {
   Cantarell,
   "Helvetica Neue",
   sans-serif;
+  color: white;
 }
 
 .navbar {
-  background: #EFE9E7;
+  background: #282828;
   color: black;
   border-bottom: 1px solid rgba(0,0,0,.1);
 }
@@ -115,33 +116,26 @@ button:focus {
   cursor: pointer;
 }
 
-.b_sel {
+.cat {
   border: 1px solid teal;
-  background: #EFE9E7;
+  background: #282828;
   color: teal;
 }
 
-.b_sel:hover {
+.cat:hover {
   background: rgba(0, 150, 136, 0.3);
 }
 
-.d_sel {
+.num {
   border: 1px solid tomato;
-  background: #EFE9E7;
+  background: #282828;
   color: tomato;
 }
 
-.d_sel:hover {
+.num:hover {
   background: rgba(244, 67, 54, 0.3);
 }
 
-.d_del {
-  background: crimson;
-  color: white;
-  border: 1px solid rgba(0,0,0,.2);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
 
 .disabled {
   pointer-events: none;
@@ -149,7 +143,9 @@ button:focus {
 }
 
 .selected {
+  background: #666;
   color: white;
+  border: 1px solid white;
 }
 
 .source {

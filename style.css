@@ -50,7 +50,7 @@ svg {
 }
 
 .domain {
-  stroke: #777;
+  stroke: white;
   display: none;
 }
 
@@ -69,10 +69,10 @@ svg {
 
 .yAxis .tick line, .xAxis .tick line {
   stroke-width: 0.5;
-  stroke: #777;
+  stroke: white;
 }
 
-.xAxis .tick line {
+.tick line {
   stroke-dasharray: 2,2;
 }
 
@@ -81,9 +81,16 @@ svg {
 }
 
 .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
   align-items: baseline;
   font-size: 0.9rem;
 }
@@ -99,6 +106,7 @@ button {
   cursor: pointer;
   margin-right: 0.5rem;
   font-size: 0.9rem;
+  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   outline: none;
 }
@@ -108,6 +116,7 @@ button:focus {
 }
 
 .circ {
+  -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
 }
 

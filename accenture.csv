@@ -1,4 +1,4 @@
-area_position,region,province,istat,district,year,month,interruption_duration,interruption_duration_range,interruption_number,interruption_number_range,dur_number,client_number,probability,altitude,altitude_range,coastal_region,mountain_region,urbanization,opex,capex,sales,abitda,population_number
+area_position,region,province,istat,district,year,month,interruption_duration,interruption_duration_range,interruption_number,interruption_number_range,dur_number,client_number,probability,altitude,altitude_range,coastal_region,mountain_region,urbanization,opex,capex,sales,ebitda,population_number
 Nord,Triveneto,Este,28001,ABANOTERME,2017,12,462059.8273,0,38037.54303,1,0-1,9649,0.208478749,14,5,0,NM,2,#N/A,#N/A,#N/A,#N/A,19349
 Nord,Lombardia,Lodi,98001,ABBADIACERRETO,2017,12,395.1182759,0,138.9976664,0,0-0,130,0.000147542,64,5,0,NM,3,#N/A,#N/A,#N/A,#N/A,297
 Nord,Lombardia,Lecco,97001,ABBADIALARIANA,2017,12,38858.17933,0,2749.881718,0,0-0,2043,0.001027743,204,1,0,T,2,#N/A,#N/A,#N/A,#N/A,3249

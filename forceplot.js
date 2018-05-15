@@ -27,6 +27,18 @@ let svg = d3.select('#killingbees').append('svg')
 
     let mountScale = d3.scalePoint()
     .domain(["NM","T","P"])
+    .range([0 + padding, height - padding]);
+
+    let areaScale = d3.scalePoint()
+    .domain(["Nord","Centro","Sud"])
+    .range([0 + padding, height - padding])
+	
+	let altitudeScale = d3.scalePoint()
+    .domain(["1","2","3","4","5"])
+    .range([0 + padding, height - padding])
+	
+	let coastalScale = d3.scalePoint()
+    .domain(["0","1"])
     .range([0 + padding, height - padding])
 
     let size = d3.scaleLinear()
@@ -125,11 +137,20 @@ let svg = d3.select('#killingbees').append('svg')
     yButtons.append('button').text('interruption number').attr('value', 'interruption_number').classed('d_sel', true).classed('num', true)
     yButtons.append('button').text('mountains').attr('value', 'mountain_region').classed('d_sel', true).classed('cat', true)
     yButtons.append('button').text('urbanization').attr('value', 'urbanization').classed('d_sel', true).classed('cat', true)
+	yButtons.append('button').text('area position').attr('value', 'area_position').classed('d_sel', true).classed('cat', true)
+	yButtons.append('button').text('altitude range').attr('value', 'altitude_range').classed('d_sel', true).classed('cat', true)
+	yButtons.append('button').text('coastal region').attr('value', 'coastal_region').classed('d_sel', true).classed('cat', true)
+		
+		
 
     let xButtons = d3.select('#killingbees-ui').append('div').classed('buttons', true);
     xButtons.append('p').text('asse X: ')
     xButtons.append('button').text('interruption duration').attr('value', 'interruption_duration').classed('b_sel', true).classed('num', true)
     xButtons.append('button').text('interruption number').attr('value', 'interruption_number').classed('b_sel', true).classed('num', true)
+	xButtons.append('button').text('client_number').attr('value', 'client_number').classed('b_sel', true).classed('num', true)
+	xButtons.append('button').text('probability').attr('value', 'probability').classed('b_sel', true).classed('num', true)
+	xButtons.append('button').text('altitude').attr('value', 'altitude').classed('b_sel', true).classed('num', true)
+	xButtons.append('button').text('population number').attr('value', 'population_number').classed('b_sel', true).classed('num', true)
 
     // make buttons interactive, vertical categories
     d3.selectAll('.d_sel').on('click', function(){
@@ -151,6 +172,27 @@ let svg = d3.select('#killingbees').append('svg')
       } else if (data_set === "urbanization"){
         simulation.force('y', d3.forceY(function(d){
           return urbScale(d[data_set])
+        }))
+        simulation.force('collide', d3.forceCollide(function(d) { 
+          return size(d.client_number) + 1 
+        }).iterations(32))
+		  } else if (data_set === "altitude_range"){
+        simulation.force('y', d3.forceY(function(d){
+          return altitudeScale(d[data_set])
+        }))
+        simulation.force('collide', d3.forceCollide(function(d) { 
+          return size(d.client_number) + 1 
+        }).iterations(32))
+		  } else if (data_set === "coastal_region"){
+        simulation.force('y', d3.forceY(function(d){
+          return coastalScale(d[data_set])
+        }))
+        simulation.force('collide', d3.forceCollide(function(d) { 
+          return size(d.client_number) + 1 
+        }).iterations(32))
+		  } else if (data_set === "area_position"){
+        simulation.force('y', d3.forceY(function(d){
+          return areaScale(d[data_set])
         }))
         simulation.force('collide', d3.forceCollide(function(d) { 
           return size(d.client_number) + 1 

@@ -1,0 +1,177 @@
+body {
+  background: #EFE9E7;
+  font-family: -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Oxygen-Sans,
+  Ubuntu,
+  Cantarell,
+  "Helvetica Neue",
+  sans-serif;
+}
+
+.navbar {
+  background: #EFE9E7;
+  color: black;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+}
+
+.navbar a {
+  color: tomato;
+}
+
+h1, h2, h3, h4, h5 {
+  margin-bottom: 2rem;
+}
+
+hr {
+  margin: 2rem 0;
+}
+
+.spaceY {
+  color: tomato;
+}
+
+.spaceX {
+  color: #0B5345;
+}
+
+svg {
+  margin: auto;
+  margin-bottom: 2rem;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  shape-rendering: crispEdges;
+}
+
+.domain {
+  stroke: #777;
+  display: none;
+}
+
+.tick text {
+  font-size: 0.8rem;
+  font-family: -apple-system,
+  BlinkMacSystemFont,
+  "Segoe UI",
+  Roboto,
+  Oxygen-Sans,
+  Ubuntu,
+  Cantarell,
+  "Helvetica Neue",
+  sans-serif;
+}
+
+.yAxis .tick line, .xAxis .tick line {
+  stroke-width: 0.5;
+  stroke: #777;
+}
+
+.xAxis .tick line {
+  stroke-dasharray: 2,2;
+}
+
+.tick text {
+  fill: #777;
+}
+
+.buttons {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-items: baseline;
+  font-size: 0.9rem;
+}
+
+.buttons p {
+  margin-right: 0.5rem;
+}
+
+button {
+  padding: 0.2rem 0.5rem;
+  border: 1px solid rgba(0,0,0,.3);
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.circ {
+  transition: opacity 0.3s ease;
+}
+
+
+.circ:hover {
+  cursor: pointer;
+}
+
+.b_sel {
+  border: 1px solid teal;
+  background: #EFE9E7;
+  color: teal;
+}
+
+.b_sel:hover {
+  background: rgba(0, 150, 136, 0.3);
+}
+
+.d_sel {
+  border: 1px solid tomato;
+  background: #EFE9E7;
+  color: tomato;
+}
+
+.d_sel:hover {
+  background: rgba(244, 67, 54, 0.3);
+}
+
+.d_del {
+  background: crimson;
+  color: white;
+  border: 1px solid rgba(0,0,0,.2);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.disabled {
+  pointer-events: none;
+  cursor: normal;
+}
+
+.selected {
+  color: white;
+}
+
+.source {
+  font-style: italic;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.box {
+  pointer-events: none;
+}
+
+.info {
+  fill: black;
+  font-size: 0.7rem;
+  text-align: center;
+}
+
+.date {
+  font-weight: bold;
+}
+
+#killingbees-ui {
+  margin-bottom: 1rem;
+}
